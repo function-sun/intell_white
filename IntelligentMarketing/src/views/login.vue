@@ -104,17 +104,17 @@ export default {
                 this.$message('验证码验证失败，请重新输入');
             }
         },
-        test(name, pass) {
-            let that = this
-            let url = '/requestVo/requestDemoX'
-            let params={
-                username: name,
-                password:pass
-            }
-            that.$http.post(url, params).then(datas=>{
-                console.log(datas)
-            })
-        },
+        // test(name, pass) {
+        //     let that = this
+        //     let url = '/requestVo/requestDemoX'
+        //     let params={
+        //         username: name,
+        //         password:pass
+        //     }
+        //     that.$http.post(url, params).then(datas=>{
+        //         console.log(datas)
+        //     })
+        // },
         //登录接口
         toLogin(name, pass) {
             let that = this
