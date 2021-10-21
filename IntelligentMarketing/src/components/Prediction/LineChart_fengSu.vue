@@ -6,6 +6,7 @@
             <el-button @click="exportExcel">导出Excel文档</el-button>
             <div class="tableDetail">
                 <el-table :data="tableData" border style="width: 100%">
+                     <!-- :width="item.label === '时间' ? '180' : ''" -->
                     <el-table-column v-for="(item, index) in columData" :key="index" align="center">
                         <template slot="header">
                             <span>{{item.label}}</span>

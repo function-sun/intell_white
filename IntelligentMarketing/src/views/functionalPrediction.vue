@@ -66,7 +66,7 @@
                         </div>
                         <div class="exceed" v-if="showModelOrTime('model')">
                             <span style="margin-top: 3px;" >模型：</span>
-                            <el-select v-model="chooseMoudel" placeholder="请选择" @change="changeModuelNo">
+                            <el-select v-model="chooseMoudel" placeholder="请选择" @change="changeModuelNo" class="modelWidth">
                                 <el-option
                                 v-for="item in ModuelList"
                                 :key="item.modelNo"
@@ -1553,6 +1553,9 @@ body{
                     .exTime{
                         width: 240px;
                     }
+                }
+                .modelWidth{
+                    width:200px !important;
                 }
                 .el-select{
                     width: 160px;
