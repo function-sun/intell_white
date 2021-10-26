@@ -100,6 +100,7 @@ export default {
                 }
             } else {
                 this.inputYanzhengma = ''
+                this.loading = false
                 this.getCode()
                 this.$message('验证码验证失败，请重新输入');
             }
@@ -124,16 +125,16 @@ export default {
                 password:pass
             }
             that.$http.post(url, params).then(datas=>{
-                console.log(datas)
                 if (datas) {
                     // window.sessionStorage.setItem('token',datas.token);
                     this.loading = false
                     setToken(datas.token)
                     this.$router.push({ path: "/index" })
                     window.location.reload();
-                } else {
-                    this.loading = false
                 }
+            }).catch(e =>{
+                this.loading = false
+                window.location.reload();
             })
         }
     }
